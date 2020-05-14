@@ -1,0 +1,22 @@
+dist: bionic
+
+os:
+  - linux
+
+branches:
+  only:
+  - master
+
+arch:
+  - arm64 
+
+addons:
+  apt:
+    update: true
+  hosts:
+    - node2
+  
+script:
+  - sudo apt-get install docker.io
+  - cd openEuler20.03
+  - docker build -t kunpengcompute/openeuler:rpmbuild .
