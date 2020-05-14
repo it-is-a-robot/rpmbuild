@@ -1,0 +1,17 @@
+[everything]
+name=openEuler-20.03-LTS everything
+baseurl=https://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/RPM-GPG-KEY-openEuler
+[update]
+name=openEuler-20.03-LTS update
+baseurl=https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.openeuler.org/openEuler-20.03-LTS/update/aarch64/RPM-GPG-KEY-openEuler
+[EPOL]
+name=openEuler-20.03-LTS EPOL
+baseurl=https://repo.openeuler.org/openEuler-20.03-LTS/EPOL/aarch64/
+enabled=1
+gpgcheck=0
