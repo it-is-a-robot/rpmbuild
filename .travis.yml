@@ -15,8 +15,17 @@ addons:
     update: true
   hosts:
     - node2
-  
+
 script:
   - sudo apt-get install docker.io
   - cd openEuler20.03
   - docker build -t kunpengcompute/openeuler:rpmbuild .
+
+deploy:
+  provider: script
+  script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push kunpengcompute/openeuler:rpmbuild
+  on:
+    branch: master
+    condition: type = push
