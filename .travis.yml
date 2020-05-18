@@ -28,4 +28,3 @@ deploy:
     - docker push kunpengcompute/openeuler:rpmbuild
   on:
     branch: master
-    condition: type = push
