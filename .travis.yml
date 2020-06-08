@@ -16,11 +16,13 @@ addons:
   hosts:
     - node2
 
+# Build Test
 script:
   - sudo apt-get install docker.io
   - cd openEuler20.03
   - docker build -t kunpengcompute/openeuler:rpmbuild .
 
+# Deploy to dockerhub
 deploy:
   provider: script
   script:
