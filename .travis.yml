@@ -20,6 +20,8 @@ script:
   - sudo apt-get install docker.io
   - cd openEuler20.03
   - docker build -t kunpengcompute/openeuler:rpmbuild .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push kunpengcompute/openeuler:rpmbuild
 
 deploy:
   provider: script
